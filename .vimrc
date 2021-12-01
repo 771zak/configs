@@ -19,6 +19,7 @@ let &t_SI = "\e[5 q"
 call plug#begin('~/vimFiles/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 nmap <C-f> : NERDTreeToggle<CR>
@@ -28,3 +29,7 @@ vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<Cr>gv=gv
 
 inoremap <C-k> <Esc>
+
+" Emmet shortCuts
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
