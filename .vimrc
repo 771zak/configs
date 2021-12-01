@@ -11,6 +11,7 @@ set noeb vb t_vb=
 set backspace=2
 set laststatus=2
 set nowrap
+set mouse=a
 
 let &t_EI = "\e[3 q"
 let &t_SI = "\e[5 q"
