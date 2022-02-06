@@ -20,6 +20,7 @@ set hidden
 set modifiable
 let &t_EI = "\e[3 q"
 let &t_SI = "\e[5 q"
+let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
@@ -31,21 +32,27 @@ Plug 'voldikss/vim-floaterm'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'ayu-theme/ayu-vim'
+Plug 'rakr/vim-one'
 Plug 'leafoftree/vim-vue-plugin'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
-source $HOME/.config/nvim/plug-config/coc.vim
-
 set termguicolors
-let ayucolor="dark"
-colorscheme ayu
+let g:airline_theme='one'
+colorscheme one
+set background=dark
+
+
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
 nmap nt :tab split<CR>
 nmap pt :tabp<CR>
+nmap qt :tabn<CR>
 nmap ;f :Files<CR>
 nmap <C-f> : NERDTreeToggle<CR>
 nmap <C-j> <plug>NERDCommenterToggle
@@ -58,7 +65,7 @@ vnoremap J :m '>+1<Cr>gv=gv
 inoremap ii <Esc>
 
 " Emmet shortCuts
-let g:user_emmet_mode='n'
+let g:user_emmet_mode='i'
 let g:user_emmet_leader_key=',' 
 
 "use <tab> for trigger completion and navigate to the next complete item
